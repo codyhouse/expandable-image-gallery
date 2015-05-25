@@ -106,7 +106,7 @@ jQuery(document).ready(function($){
 	}
 
 	function enableSwipe($container) {
-		var mq = window.getComputedStyle(document.querySelector('.cd-slider'), '::before').getPropertyValue('content');
+		var mq = window.getComputedStyle(document.querySelector('.cd-slider'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, "");
 		return ( mq=='mobile' || $container.hasClass('cd-slider-active'));
 	}
 });
