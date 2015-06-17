@@ -6,6 +6,9 @@ jQuery(document).ready(function($){
 			// create slider pagination
 			sliderPagination = createSliderPagination(container);
 		
+		//update slider navigation visibility
+		updateNavigation(container, container.find('.cd-slider li').eq(0));
+
 		container.find('.cd-slider').on('click', function(event){
 			//enlarge slider images 
 			if( !container.hasClass('cd-slider-active') && $(event.target).is('.cd-slider')) {
